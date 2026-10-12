@@ -94,6 +94,16 @@ Misc:
       --dry-run                 test configuration and exit
 ```
 
+## HTTP API endpoints
+
+When the HTTP API is enabled, XMRig Proxy exposes these read endpoints:
+
+- `/1/summary` — proxy version, mode, total hashrate, miner/worker counts, upstream status, and share statistics.
+- `/1/workers` — per-worker statistics and aggregate hashrate.
+- `/1/miners` — connected miner connection details.
+
+The legacy summary aliases `/2/summary` and `/api.json` are also accepted.
+
 ## Donations
 
 The default donation fee is 2%, which can be reduced to 1% or completely disabled using the `donate-level` option. This fee applies only when you utilize more than 256 miners.
