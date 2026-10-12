@@ -94,6 +94,18 @@ Misc:
       --dry-run                 test configuration and exit
 ```
 
+## HTTP API
+
+The `/1/workers` endpoint returns worker rows using the following field order:
+
+```text
+["name", "ip", "connections", "accepted", "rejected", "invalid",
+ "hashes", "last_hash", "hashrate_1m", "hashrate_10m",
+ "hashrate_1h", "hashrate_12h", "hashrate_24h"]
+```
+
+The response also includes a `hashrate.total` array with the aggregate hashrate for the same time windows. Hashrate values are reported in H/s.
+
 ## Donations
 
 The default donation fee is 2%, which can be reduced to 1% or completely disabled using the `donate-level` option. This fee applies only when you utilize more than 256 miners.
