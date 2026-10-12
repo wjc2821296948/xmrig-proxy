@@ -71,6 +71,8 @@ API:
       --http-no-restricted      enable full remote access to HTTP API (only if access token set)
 
 TLS:
+      # Miner-to-proxy TLS is configured on the proxy bind/listener.
+      # Pool TLS in the pools section is independent and controls proxy-to-pool connections.
       --tls-bind=ADDR           bind to specified address with enabled TLS
       --tls-gen=HOSTNAME        generate TLS certificate for specific hostname
       --tls-cert=FILE           load TLS certificate chain from a file in the PEM format
