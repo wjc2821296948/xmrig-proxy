@@ -14,6 +14,8 @@ The codebase is shared with the [XMRig](https://github.com/xmrig/xmrig) miner.
 ## Compatibility
 Compatible with any pool and any miner that supports NiceHash.
 
+XMRig Proxy speaks the CryptoNote Stratum protocol directly. Stratum is not HTTP or WebSocket, so HTTP/WebSocket-only reverse proxies and tunnels cannot forward miner connections to the proxy. For encrypted miner connections, use the proxy's native TLS listener (for example, `--tls-bind`) instead.
+
 ## Why?
 This proxy is designed to handle donation traffic from XMRig. No other solution works well with high connection and disconnection rates.
 
