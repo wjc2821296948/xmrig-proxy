@@ -94,6 +94,10 @@ Misc:
       --dry-run                 test configuration and exit
 ```
 
+## Console controls
+
+Press `w` in the proxy console to display the currently connected workers.
+
 ## Donations
 
 The default donation fee is 2%, which can be reduced to 1% or completely disabled using the `donate-level` option. This fee applies only when you utilize more than 256 miners.
