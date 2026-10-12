@@ -22,6 +22,10 @@ This proxy is designed to handle donation traffic from XMRig. No other solution 
 * Git tree: https://github.com/xmrig/xmrig-proxy.git
   * Clone with `git clone https://github.com/xmrig/xmrig-proxy.git` :hammer: [Build instructions](https://xmrig.com/docs/proxy).
   
+## TLS direction
+
+TLS for miner-to-proxy connections is configured on the proxy listener, for example with `--tls-bind` or the corresponding `bind` configuration. TLS settings inside a `pools` entry control the separate proxy-to-pool connection. These two TLS settings are independent.
+
 ## Usage
 :boom: If you are using Linux and need to manage over **1000 connections**, you must [increase the limits on open files](https://github.com/xmrig/xmrig-proxy/wiki/Ubuntu-setup).
   
@@ -71,8 +75,6 @@ API:
       --http-no-restricted      enable full remote access to HTTP API (only if access token set)
 
 TLS:
-      # Miner-to-proxy TLS is configured on the proxy bind/listener.
-      # Pool TLS in the pools section is independent and controls proxy-to-pool connections.
       --tls-bind=ADDR           bind to specified address with enabled TLS
       --tls-gen=HOSTNAME        generate TLS certificate for specific hostname
       --tls-cert=FILE           load TLS certificate chain from a file in the PEM format
