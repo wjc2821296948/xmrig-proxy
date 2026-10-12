@@ -22,6 +22,20 @@ This proxy is designed to handle donation traffic from XMRig. No other solution 
 * Git tree: https://github.com/xmrig/xmrig-proxy.git
   * Clone with `git clone https://github.com/xmrig/xmrig-proxy.git` :hammer: [Build instructions](https://xmrig.com/docs/proxy).
   
+## Building on ARM64 (aarch64)
+
+The build steps on aarch64 are the same as on other Linux systems once the required development packages are installed:
+
+```bash
+git clone https://github.com/xmrig/xmrig-proxy.git
+mkdir xmrig-proxy/build
+cd xmrig-proxy/build
+cmake ..
+make
+```
+
+Package names for the build dependencies may differ between distributions.
+
 ## Usage
 :boom: If you are using Linux and need to manage over **1000 connections**, you must [increase the limits on open files](https://github.com/xmrig/xmrig-proxy/wiki/Ubuntu-setup).
   
